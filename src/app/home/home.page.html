@@ -1,20 +1,50 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  <div class="backgroun-wallpaper"></div>
+  <canvas id="canvas-spectrum"></canvas>
+  <ion-card id="view-content-video">
+    <ion-card-content>
+      <div class="content video-view">
+        <video class="const"></video>
+        <canvas class="const"></canvas>
+      </div>
+    </ion-card-content>
+    <ion-card class="volume-slide">
+      <ion-card-content>
+        <ion-range (ionChange)="changeVolume($event)" color="primary" min="0" max="100">
+          <ion-label slot="start">0</ion-label>
+          <ion-label slot="end">100</ion-label>
+        </ion-range>
+      </ion-card-content>
+    </ion-card>
+  </ion-card>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="showList()" id="showActionList">
+      <ion-icon name="eye-outline" color="secondary"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+  <div id="list-musics">
+    <app-list-musics></app-list-musics>
   </div>
 </ion-content>
+<ion-footer class="player-music">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button color="secondary" fill="clear" id="button-backward-audio" (click)="backward()">
+        <ion-icon name="chevron-back-outline" slot="icon-only"></ion-icon>
+      </ion-button>
+      <ion-button color="secondary" fill="clear" id="button-play-audio">
+        <ion-icon name="play-outline" slot="icon-only"></ion-icon>
+      </ion-button>
+      <ion-button color="secondary" fill="clear" id="button-forward-audio" (click)="forward()">
+        <ion-icon name="chevron-forward-outline" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-range min="0" max="100" color="secondary" id="slide-control-audio"></ion-range>
+  
+    <ion-item lines="none" slot="end">
+      <ion-label id="duration-control-audio">00:00 / 00:00</ion-label>
+    </ion-item>
+    <ion-progress-bar color="secondary" type="indeterminate" id="loading-control-audio"></ion-progress-bar>
+  </ion-toolbar>
+</ion-footer>

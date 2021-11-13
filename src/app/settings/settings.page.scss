@@ -1,0 +1,46 @@
+ion-header {
+  ion-toolbar {
+    --background: var(--ion-color-primary);
+    ion-title {
+      color: var(--sc-color-text);
+    }
+    ion-buttons {
+      ion-button {
+        color: var(--sc-color-text);
+      }
+    }
+  }
+}
+ion-footer {
+  ion-toolbar {
+    --background: var(--ion-color-primary);
+    ion-button {
+      ion-icon {
+        color: var(--sc-color-text2);
+      }
+      ion-label {
+        color: var(--sc-color-text2);
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+ion-content {
+  * {
+    font-weight: bold;
+  }
+  --background: rgba(var(--ion-color-secondary-rgb), 0.5);
+  ion-list {
+    background: transparent;
+    ion-item {
+      --background: transparent;
+      ion-label {
+        color: var(--sc-color-text2);
+      }
+      ion-input {
+        color: var(--sc-color-text2);
+      }
+    }
+  }
+}

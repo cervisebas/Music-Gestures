@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="dismiss()">
+        <ion-icon slot="icon-only" name="arrow-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Configuraciones</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item id="fps-setting">
+      <ion-label slot="start">FPS:</ion-label>
+      <ion-input type="number" placeholder="Escribe aqui..." min="15" max="120" value="60"></ion-input>
+    </ion-item>
+    <ion-item id="playlist-setting">
+      <ion-label slot="start">Playlist (YouTube):</ion-label>
+      <ion-input type="text" placeholder="Escribe aqui..."></ion-input>
+    </ion-item>
+    <ion-item id="colors-setting">
+      <ion-label>Habilitar colores dinamicos:</ion-label>
+      <ion-toggle color="tertiary" slot="end"></ion-toggle>
+    </ion-item>
+    <ion-item id="camaras-setting">
+      <ion-label>Elije una camara:</ion-label>
+      <ion-select value="" placeholder="Camaras" (ionChange)="changeSelect($event)"></ion-select>
+    </ion-item>
+    <ion-item id="storage-setting">
+      <ion-label>Almacenamiento (PlayList):</ion-label>
+      <ion-select value="" placeholder="Almacenamiento" (ionChange)="changeStorage($event)">
+        <ion-select-option value="youtube">Youtube</ion-select-option>
+        <ion-select-option value="local">Local</ion-select-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-button (click)="setConfig()" expand="block" color="secondary">
+      <ion-icon name="save-outline" slot="start"></ion-icon>
+      <ion-label>Guardar</ion-label>
+    </ion-button>
+  </ion-toolbar>
+</ion-footer>

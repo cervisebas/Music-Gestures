@@ -1,0 +1,41 @@
+ion-content {
+  height: calc(100% - 56px);
+  --background: rgba(var(--ion-color-secondary-rgb), 0.5);
+  ion-list.list-musics {
+    background: transparent;
+    ion-item.clone {
+      display: none;
+    }
+    ion-item.select {
+      --background: rgba(var(--ion-color-primary-rgb), .7);
+      ion-icon {
+        color: #FFF;
+      }
+      ion-label {
+        color: #FFF;
+        p {
+          margin-left: 8px;
+          color: #000000;
+        }
+      }
+    }
+    ion-item {
+      --background: transparent;
+      ion-icon {
+        color: #FFF;
+      }
+      ion-label {
+        color: #FFF;
+        p {
+          margin-left: 8px;
+          color: #000000;
+        }
+      }
+    }
+  }
+}
+ion-footer {
+    ion-toolbar {
+      --background: var(--ion-color-primary);
+    }
+}

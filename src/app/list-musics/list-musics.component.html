@@ -1,0 +1,38 @@
+<ion-content class="list-musics-page-content">
+  <ion-list class="list-musics">
+    <ion-item button class="clone">
+      <ion-icon slot="start" name="musical-note"></ion-icon>
+      <ion-label>
+        <h3>Prueba titulo</h3>
+        <p>Luciano Miño</p>
+      </ion-label>
+    </ion-item>
+    <div class="loading">
+      <ion-item button class="loading-element clone">
+        <ion-spinner slot="start" color="secondary"></ion-spinner>
+        <ion-label>
+          <h3><ion-skeleton-text animated style="width: 70%"></ion-skeleton-text></h3>
+          <p><ion-skeleton-text animated style="width: 40%"></ion-skeleton-text></p>
+        </ion-label>
+      </ion-item>
+    </div>
+  </ion-list>
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button color="secondary" class="button-power" (click)="actionPower()">
+        <ion-icon slot="icon-only" name="play-circle-outline"></ion-icon>
+      </ion-button>
+      <ion-button color="secondary" (click)="openSetting()">
+        <ion-icon slot="icon-only" name="settings-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-buttons slot="end">
+      <ion-button (click)="hideList()" color="secondary">
+        <ion-icon slot="icon-only" name="eye-off-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>
