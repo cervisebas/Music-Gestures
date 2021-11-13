@@ -1,0 +1,13 @@
+{
+    "name": "music-gestures",
+    "version": "2.0.1",
+    "author": "SCApps",
+    "description": "Music Gestures",
+    "license": "MIT",
+    "main": "main.js",
+    "dependencies": {
+        "@electron/remote": "^2.0.1",
+        "electron": "^13.5.2",
+        "youtube-dl-exec": "^1.3.2"
+    }
+}
